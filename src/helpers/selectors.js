@@ -8,7 +8,6 @@ export function getAppointmentsForDay(state, day) {
   
   // find the object in our state.days array who's name matches the provided day. 
   let dayArr = state.days.filter(eachDay => eachDay.name === day);
-  console.log("HERE >>>>> ", dayArr)
   
   if (dayArr.length === 0) {
     return [];
@@ -17,6 +16,20 @@ export function getAppointmentsForDay(state, day) {
   // access that specific days appointment array.
   let appointmentsArr = dayArr[0].appointments;
 
-  let eachAppointment = appointmentsArr.map(appoint => state.appointments[appoint])
+  let eachAppointment = appointmentsArr.map(appointment => state.appointments[appointment])
   return eachAppointment;
+}
+
+
+export function getInterview(state, interview){
+  if (!interview) {
+    return null;
+  }
+
+  const id = interview.interviewer;
+  const interviewer = state.interviewers[id];
+
+  const result = {...interview, interviewer};
+
+  return result;
 }
