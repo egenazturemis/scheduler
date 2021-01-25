@@ -48,8 +48,8 @@ export function getInterviewersForDay(state, day) {
   }
   
   // access that specific days appointment array.
-  let appointmentsArr = dayArr[0].appointments;
+  let interviewersArr = dayArr[0].interviewers;
 
-  let eachAppointment = appointmentsArr.map(appointment => state.appointments[appointment])
-  return eachAppointment;
+  let eachInterview = interviewersArr.map(interview => state.interviewers[interview])
+  return eachInterview;
 }
