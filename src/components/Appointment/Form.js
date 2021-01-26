@@ -7,8 +7,8 @@ import Button from "components/Button";
 
 export default function Form(props) {
   const [name, setName] = useState(props.student || "");
-  const [interviewer, setInterviewer] = useState(props.interviewer.id || null);
-  
+  const [interviewer, setInterviewer] = useState(props.interviewer && props.interviewer.id);
+
   const nameChanger = (event) => {
     setName(event.target.value);
   }
