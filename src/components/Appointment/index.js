@@ -28,25 +28,26 @@ export default function Appointment(props) {
   );
 
   function save(name, interviewer) {
-    transition(SAVING);
     const interview = {
       student: name,
       interviewer
     };
-    props.bookInterview(props.id, interview).then(() => {
-      transition(SHOW);
-    }).catch(() => {
-      transition(ERROR_SAVE, true);
-    })
-;  }
+
+    transition(SAVING);
+    
+    props
+      .bookInterview(props.id, interview)
+      .then(() => transition(SHOW))
+      .catch(() => transition(ERROR_SAVE, true));
+  }
 
   function destroy() {
     transition(DELETING, true);
-    props.cancelInterview(props.id).then(() => {
-      transition(EMPTY);
-    }).catch(() => {
-      transition(ERROR_DELETE, true);
-    })
+    
+    props
+    .cancelInterview(props.id)
+    .then(() => transition(EMPTY))
+    .catch(() => transition(ERROR_DELETE, true));
   }
 
   console.log("PROPS >>>>> ", props)
