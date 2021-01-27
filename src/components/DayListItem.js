@@ -23,6 +23,8 @@ export default function DayListItem(props) {
       return `${props.spots} spots remaining`;
     };
   }
+
+  console.log("Daylist Item: ", props.spots)
   
   return (
     // The <li> represents the entire day item.
