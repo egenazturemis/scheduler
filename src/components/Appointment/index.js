@@ -50,7 +50,6 @@ export default function Appointment(props) {
     .catch(() => transition(ERROR_DELETE, true));
   }
 
-  console.log("PROPS >>>>> ", props)
   return (
     <>
       <article className="appointment">

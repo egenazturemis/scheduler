@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
- 
-import "components/Appointment";
-import DayList from "./DayList";
-import Appointment from "./Appointment/index";
+
 import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "../helpers/selectors"
 
 
@@ -57,6 +54,7 @@ export default function useApplicationData() {
     }))
   }) 
   }
+
 
   const setDay = day => setState({ ...state, day });
   
