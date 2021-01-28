@@ -34,6 +34,7 @@ export default function Form(props) {
       <section className="appointment__card-left">
         <form autoComplete="off">
           <input
+            data-testid="student-name-input"
             className="appointment__create-input text--semi-bold"
             name="name"
             type="text"
@@ -41,9 +42,6 @@ export default function Form(props) {
             value={name}
             onChange={nameChanger}
             onSubmit={event => event.preventDefault()}
-              /*
-                This must be a controlled component
-              */
           />
         </form>
           <InterviewerList 
