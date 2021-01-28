@@ -12,5 +12,5 @@ Appointment form, where users can create a new appointment or edit an existing o
 !["Users have to confirm when deleting an appointment"](https://github.com/egenazturemis/scheduler/blob/master/docs/confirm-delete.png?raw=true)
 Users have to confirm when deleting an appointment.
 
-!["Users see a status update while their appointment is being created or deleted"](https://github.com/egenazturemis/scheduler/blob/master/docs/appointment-form.png?raw=true)
+!["Users see a status update while their appointment is being created or deleted"](https://github.com/egenazturemis/scheduler/blob/master/docs/deleting.png?raw=true)
 Users see a status update while their appointment is being created or deleted.
