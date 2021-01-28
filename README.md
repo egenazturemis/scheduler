@@ -1,23 +1,5 @@
 # Interview Scheduler
 
-## Setup
+## Project Description
 
-Install dependencies with `npm install`.
-
-## Running Webpack Development Server
-
-```sh
-npm start
-```
-
-## Running Jest Test Framework
-
-```sh
-npm test
-```
-
-## Running Storybook Visual Testbed
-
-```sh
-npm run storybook
-```
+A single page application, Scheduler keeps track of student interviews. Users enjoy an optimized user experience as they easily add, edit and delete appointments in real time. Data is persisted by the API server using a PostgreSQL database.
