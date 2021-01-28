@@ -7,7 +7,10 @@ A single page application, Scheduler keeps track of student interviews. Users en
 ## Screenshots
 
 !["Appontment form, where users can create a new appointment or edit an existing one"](https://github.com/egenazturemis/scheduler/blob/master/docs/appointment-form.png?raw=true)
+Appontment form, where users can create a new appointment or edit an existing one
 
 !["Users have to confirm when deleting an appointment"](https://github.com/egenazturemis/scheduler/blob/master/docs/confirm-delete.png?raw=true)
+Users have to confirm when deleting an appointment
 
 !["Users see a status update while their appointment is being created or deleted"](https://github.com/egenazturemis/scheduler/blob/master/docs/appointment-form.png?raw=true)
+Users see a status update while their appointment is being created or deleted
