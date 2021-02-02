@@ -38,5 +38,5 @@ npm test
 ```sh
 npm run storybook
 ```
-#### Setting Up the Interview Scheduler API
+## Setup the Interview Scheduler API
 Clone the [scheduler-api](https://github.com/egenazturemis/scheduler-api)

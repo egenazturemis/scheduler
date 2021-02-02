@@ -74,7 +74,7 @@ export default function Appointment(props) {
         )}
         {mode === SAVING && (
           <Status 
-            message="Creating appointment"
+            message="Saving..."
           />
         )} 
         {mode === DELETING && (
