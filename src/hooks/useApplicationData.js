@@ -3,7 +3,6 @@ import axios from "axios";
 
 import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "../helpers/selectors"
 
-
 export default function useApplicationData() {
   
   const [state, setState] = useState({
@@ -18,8 +17,6 @@ export default function useApplicationData() {
     },  
     interviewers: {}
   });
-
-
 
   function spotsRemaining(id, isAdded) {
     let count;
@@ -50,7 +47,6 @@ export default function useApplicationData() {
 
     }
     return count;
-
   }
 
   function bookInterview(id, interview) {
@@ -74,7 +70,6 @@ export default function useApplicationData() {
         spotsRemaining(id, true);
       }
     });
-    
   }
 
   function cancelInterview(id) {
@@ -92,7 +87,6 @@ export default function useApplicationData() {
       spotsRemaining(id, false)
     }) 
   }
-
 
   const setDay = day => setState({ ...state, day });
   

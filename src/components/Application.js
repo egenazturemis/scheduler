@@ -36,7 +36,6 @@ export default function Application(props) {
     )
   }))
 
-    
   return (
     <main className="layout">
       <section className="sidebar">
@@ -58,7 +57,6 @@ export default function Application(props) {
           src="images/lhl.png"
           alt="Lighthouse Labs"
         />
-       
       </section>
       <section className="schedule">
         {schedule}

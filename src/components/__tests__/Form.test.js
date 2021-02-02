@@ -4,7 +4,6 @@ import { render, cleanup } from "@testing-library/react";
 
 import Form from "components/Appointment/Form";
 
-
 afterEach(cleanup);
 
 describe("Form", () => {
@@ -30,7 +29,4 @@ describe("Form", () => {
     );
     expect(getByTestId("student-name-input")).toHaveValue("Lydia Miller-Jones");
   });
-    
-  
-  
 });
