@@ -1,6 +1,3 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-
 export function getAppointmentsForDay(state, day) {
   if (state.days.length === 0) {
     return [];
