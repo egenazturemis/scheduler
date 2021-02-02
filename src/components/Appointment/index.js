@@ -28,13 +28,13 @@ export default function Appointment(props) {
   );
 
   function save(name, interviewer) {
+    transition(SAVING);
+    
     const interview = {
       student: name,
       interviewer
     };
 
-    transition(SAVING);
-    
     props
       .bookInterview(props.id, interview)
       .then(() => transition(SHOW))
@@ -69,7 +69,6 @@ export default function Appointment(props) {
             interview={props.interview}
             onCancel={() => back()}
             onSave={save}
-            // setInterviewer={setInterviewer}
           />
         )}
         {mode === SAVING && (

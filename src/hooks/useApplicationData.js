@@ -64,16 +64,15 @@ export default function useApplicationData() {
       [id]: appointment
     };
 
-    console.log("HERE >>> ", state.appointments[id])
-    if (state.appointments[id].interview === null) {
-      spotsRemaining(id, true);
-    }
-
     return axios.put(`/api/appointments/${id}`, { interview }).then(() => {
       setState(prev => ({
         ...prev,
         appointments
       }))
+
+      if (state.appointments[id].interview === null) {
+        spotsRemaining(id, true);
+      }
     });
     
   }
