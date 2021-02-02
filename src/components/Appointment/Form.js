@@ -8,6 +8,7 @@ import Button from "components/Button";
 export default function Form(props) {
   const [name, setName] = useState(props.student || "");
   const [interviewer, setInterviewer] = useState(props.interviewer && props.interviewer.id);
+  const [error, setError] = useState("");
 
   const nameChanger = (event) => {
     setName(event.target.value);
@@ -24,6 +25,11 @@ export default function Form(props) {
   }
 
   const saveInterview = () => {
+    if (name === "") {
+      setError("Student name cannot be blank");
+      return;
+    }
+    setError("");
     props.onSave(name, interviewer);
   }
 
@@ -43,6 +49,7 @@ export default function Form(props) {
             onChange={nameChanger}
             onSubmit={event => event.preventDefault()}
           />
+          <section className="appointment__validation">{error}</section>
         </form>
           <InterviewerList 
             interviewers={props.interviewers} 
@@ -59,9 +66,3 @@ export default function Form(props) {
     </main>
   )
 }
-
-// name="Lydia Miller-Jones"
-//             interviewers={interviewers} 
-//             interviewer={interviewer}
-//             onSave={action("onSave")}
-//             onCancel={action("onCancel")}
