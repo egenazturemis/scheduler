@@ -48,14 +48,15 @@ export default function Form(props) {
             value={name}
             onChange={nameChanger}
             onSubmit={event => event.preventDefault()}
+            data-testid="student-name-input"
           />
-          <section className="appointment__validation">{error}</section>
         </form>
-          <InterviewerList 
-            interviewers={props.interviewers} 
-            interviewer={interviewer} 
-            setInterviewer={setInterviewer}
-          />
+        <section className="appointment__validation">{error}</section>
+        <InterviewerList 
+          interviewers={props.interviewers} 
+          interviewer={interviewer} 
+          setInterviewer={setInterviewer}
+        />
       </section>
       <section className="appointment__card-right">
         <section className="appointment__actions">
